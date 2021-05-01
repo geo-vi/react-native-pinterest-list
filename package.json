@@ -1,0 +1,58 @@
+{
+  "name": "react-native-pinterest-list",
+  "version": "0.0.1",
+  "main": "./src/index.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geo-vi/react-native-pinterest-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geo-vi/react-native-pinterest-list.git/issues"
+  },
+  "keywords": [
+    "react-native",
+    "pinterest",
+    "masonry",
+    "list"
+  ],
+  "author": "Geo-vi",
+  "license": "MIT",
+  "files": [
+    "/src"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "prettier": "node ./scripts/prettier.js write",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "flow": "flow check",
+    "test": "jest",
+    "ci": "yarn lint && yarn flow && yarn test"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "example"
+    ]
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "^4.0.1",
+    "eslint": "^7.25.0",
+    "eslint-config-anf": "^0.6.2",
+    "eslint-config-prettier": "^8.3.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react": "~17.0.2",
+    "react-native": "~0.64.0"
+  },
+  "dependencies": {}
+}
